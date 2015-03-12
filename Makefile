@@ -10,7 +10,7 @@
 # at <https://github.com/afseo/cmits>, for example by
 # including this notice in its entirety in derived works.
 # --- END AFSEO_DATA_RIGHTS ---
-N = iacic
+N = cybercic
 
 all: $N.pdf $N.sty
 

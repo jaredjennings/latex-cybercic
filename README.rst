@@ -1,5 +1,5 @@
-This is iacic, a horrible hack for LaTeX which is used in concert with the
-iadoc package to make documents with annotations of compliance with information
+This is cybercic, a horrible hack for LaTeX which is used in concert with the
+cyber package to make documents with annotations of compliance with information
 assurance (IA) requirements. "cic" stands for Controls in Contents, and when
 you include this package, some notations of compliance are added to section
 names as seen in the table of contents of the final document.
@@ -22,4 +22,4 @@ of contents, the entry for 2.2 will look like "2.2 State Changes---DCSS-1."
 Because of the obscene macro hackery involved, it doesn't work if you have any
 macros inside your section titles, like \texttt or \emph.
 
-iacic is released under the MIT license; see the file named LICENSE.
+cybercic is released under the MIT license; see the file named LICENSE.
