@@ -21,3 +21,5 @@ of contents, the entry for 2.2 will look like "2.2 State Changes---DCSS-1."
 
 Because of the obscene macro hackery involved, it doesn't work if you have any
 macros inside your section titles, like \texttt or \emph.
+
+iacic is released under the MIT license; see the file named LICENSE.
