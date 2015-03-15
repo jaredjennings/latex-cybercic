@@ -22,14 +22,14 @@
 % SOFTWARE.
 % \fi
 %
-% ^^A We cannot \usepackage{iacic}, because it is a horrible hack.
+% ^^A We cannot \usepackage{cybercic}, because it is a horrible hack.
 % ^^A Therefore we do not get \filedate and \fileversion for free.
-% \def\filedate{2012/06/07}
-% \def\fileversion{v1.2}
+% \def\filedate{2015/03/11}
+% \def\fileversion{v1.3}
 % \iffalse
 %<package>\NeedsTeXFormat{LaTeX2e}
-%<package>\ProvidesPackage{iacic}
-%<package>   [2012/12/17 Renamed skiacic to iacic]
+%<package>\ProvidesPackage{cybercic}
+%<package>   [2015/03/11 Renamed iacic to cybercic]
 %
 %<*driver>
 \documentclass{ltxdoc}
@@ -53,7 +53,7 @@
 \CodelineIndex
 
 \begin{document}
-  \DocInput{iacic.dtx}
+  \DocInput{cybercic.dtx}
 \end{document}
 %</driver>
 % \fi
@@ -79,12 +79,13 @@
 % \changes{v1.0}{2011/11/02}{Split off from iadoc}
 % \changes{v1.1}{2012/06/07}{Made skiacic into a \LaTeX\ package}
 % \changes{v1.2}{2012/12/17}{Renamed skiacic to iacic}
+% \changes{v1.3}{2015/03/11}{Renamed iacic to cybercic; changes for suitability on CTAN}
 %
-% \GetFileInfo{iacic.sty}
+% \GetFileInfo{cybercic.sty}
 %
-% \title{The \textsf{iacic} package\thanks{This document corresponds to
-%   \textsf{iacic}~\fileversion, dated~\filedate.}}
-% \author{Jared Jennings \\ \texttt{jared.jennings.ctr@us.af.mil}}
+% \title{The \textsf{cybercic} package\thanks{This document corresponds to
+%   \textsf{cybercic}~\fileversion, dated~\filedate.}}
+% \author{Jared Jennings \\ \texttt{jjennings@fastmail.fm}}
 %
 % \maketitle
 % \tableofcontents
@@ -93,7 +94,7 @@
 %
 % \section{What's it for?}
 %
-% This package, when used in conjunction with \textsf{iadoc}, adds IA control
+% This package, when used in conjunction with \textsf{cyber}, adds IA control
 % names to division names in the table of contents. (The \textsf{cic} stands
 % for ``controls in contents.'' \emph{Division} means chapter, section,
 % subsection, subsubsection, etc.)
@@ -106,22 +107,22 @@
 % \documents{iacontrol}{IAIA-1} Bla, bla, bla...
 % \end{verbatim}
 %
-% Without \textsf{iacic}, this creates a line in your table of contents that
+% Without \textsf{cybercic}, this creates a line in your table of contents that
 % says something like, ``3.2 Stuff about individual authentication ..... 34,''
 % and a section heading in the body of the document, on (in our example) page
 % 34, that says something like, ``3.2 Stuff about individual authentication.''
 %
-% When you add \textsf{iacic}, the line in your table of contents will say,
+% When you add \textsf{cybercic}, the line in your table of contents will say,
 % ``3.2 Stuff about individual authentication (IAIA-1) ... 34.'' The section
 % head in the body of the document will stay the same.
 %
 %
 % \section{How to use it}
 %
-% In the preamble of your document, write |\usepackage{iacic}|. But! You must
+% In the preamble of your document, write |\usepackage{cybercic}|. But! You must
 % be careful where you write it. If you use \textsf{hyperref}, you must use
-% \textsf{iacic} \emph{after} \textsf{hyperref}. You must use
-% \textsf{iacic} after \textsf{iadoc}, as well.
+% \textsf{cybercic} \emph{after} \textsf{hyperref}. You must use
+% \textsf{cybercic} after \textsf{cyber}, as well.
 %
 % \DescribeMacro{\Skiacontrolsincontentsenabledfalse}
 %
@@ -156,7 +157,7 @@
 % really, really need to. It may not play well with other packages.
 %
 % If a section spans multiple pages, and compliance posture tags (like
-% |\documents| or |\implements|, see \textsf{iadoc} documentation) are strewn
+% |\documents| or |\implements|, see \textsf{cyber} documentation) are strewn
 % throughout, running page heads containing section names will only show IA
 % control names mentioned before the page began. Patches gratefully accepted.
 %
@@ -338,7 +339,7 @@
 % division titles have no formatting in them at all.
 %
 % Most of this definition of addcontentsline comes from the hyperref package.
-% For this to work properly, iadoc must be loaded \emph{after} hyperref.
+% For this to work properly, cyber must be loaded \emph{after} hyperref.
 %    \begin{macrocode}
 \@ifpackageloaded{hyperref}{%
     \gdef\addcontentsline#1#2#3{% toc extension, type, tag
