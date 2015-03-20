@@ -54,7 +54,8 @@ install: $N.pdf $N.sty
 dist: $N.pdf $N.sty
 	rm -rf dist
 	mkdir -p dist/$N
-	cp README.txt $N.dtx $N.ins $N.sty $N.pdf dist/$N
+	cp README.rst dist/$N/README
+	cp $N.dtx $N.ins $N.sty $N.pdf dist/$N
 	cd dist; zip -r $N.zip $N
 
 
