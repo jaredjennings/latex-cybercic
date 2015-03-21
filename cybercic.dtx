@@ -124,14 +124,14 @@
 % \textsf{cybercic} \emph{after} \textsf{hyperref}. You must use
 % \textsf{cybercic} after \textsf{cyber}, as well.
 %
-% \DescribeMacro{\Skiacontrolsincontentsenabledfalse}
+% \DescribeMacro{\Cybercontrolsincontentsenabledfalse}
 %
-% \DescribeMacro{\Skiacontrolsincontentsenabledtrue}
+% \DescribeMacro{\Cybercontrolsincontentsenabledtrue}
 %
 % If there is a part of your document wherein you do not want section titles in
 % the table of contents changed, at the beginning of that part write
-% |\Skiacontrolsincontentsenabledfalse|. When you want controls-in-contents
-% re-enabled, write |\Skiacontrolsincontentsenabledtrue|.
+% |\Cybercontrolsincontentsenabledfalse|. When you want controls-in-contents
+% re-enabled, write |\Cybercontrolsincontentsenabledtrue|.
 %
 %
 % \section{Caveats}
@@ -172,11 +172,11 @@
 %
 % Given that we are using controlsincontents, sometimes it needs to be disabled
 % for part of a document. The newif here is for that purpose.
-% \begin{macro}{\Skiacontrolsincontentsenabledtrue}
-% \begin{macro}{\Skiacontrolsincontentsenabledfalse}
+% \begin{macro}{\Cybercontrolsincontentsenabledtrue}
+% \begin{macro}{\Cybercontrolsincontentsenabledfalse}
 %    \begin{macrocode}
-\newif\ifSkiacontrolsincontentsenabled
-\Skiacontrolsincontentsenabledtrue
+\newif\ifCybercontrolsincontentsenabled
+\Cybercontrolsincontentsenabledtrue
 %    \end{macrocode}
 % \end{macro}
 % \end{macro}
@@ -224,7 +224,7 @@
 %    \begin{macrocode}
 \let\skia@orig@sect\@sect
 \gdef\@sect#1#2#3#4#5#6[#7]#8{%
-    \ifSkiacontrolsincontentsenabled
+    \ifCybercontrolsincontentsenabled
 %    \end{macrocode}
 % \#1 is the kind of division, e.g. section or subparagraph. \#2 is the depth
 % of this kind of division in the hierarchy (1 is a chapter, 2 is a
@@ -284,7 +284,7 @@
     \fi
     \else
 %    \end{macrocode}
-% If we're in this |else|, Skiacontrolsincontentsenabled is not true. Just do
+% If we're in this |else|, Cybercontrolsincontentsenabled is not true. Just do
 % the usual section thing.
 %    \begin{macrocode}
       \skia@orig@sect{#1}{#2}{#3}{#4}{#5}{#6}[#7]{#8}
@@ -297,7 +297,7 @@
 \ifdefined\@chapter
 \let\skia@orig@chapter\@chapter
 \gdef\@chapter[#1]#2{%
-    \ifSkiacontrolsincontentsenabled
+    \ifCybercontrolsincontentsenabled
     \edef\last@division{chapter\alphchapter}
     \edef\last@divtitle{\csname titleof\last@division \endcsname}
     \edef\last@divaddedto{\csname addedto\last@division \endcsname}
